@@ -15,4 +15,16 @@ class PagesController < ApplicationController
 	@title = "Webdienste"
   end
 
+  def reference
+	@title = "Referenzen"
+  end
+
+  def news
+	@title = "Aktuelles"
+  end
+
+  def impressum
+	@title = "Impressum"
+  end
+
 end

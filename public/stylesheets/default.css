@@ -70,7 +70,7 @@ fieldset    { border: 0 !important; }
 #foot     { font-size: 1.2em; clear: both; }
 
 /* -- Logo constructs -- */
-h1        { font-family: Georgia, "New York CE", utopia, serif; font-size: 3em; font-weight: normal; margin-top: 40px; }
+h1        { font-family: Georgia, "New York CE", utopia, serif; font-size: 3em; font-weight: normal; margin-top: -10px; }
 h1 a      { text-decoration: none; color: #fff !important; }
 
 #logo *     { color: #eaafa3; text-decoration: none !important; }
@@ -93,6 +93,7 @@ h1 a      { text-decoration: none; color: #fff !important; }
 .col2     { width: 49%; float: right; }
 img.left  { margin-left: 0 !important; }
 img.right { margin-right: 0 !important; }
+.round { -moz-border-radius: 10px; -webkit-border-radius: 10px; }
 
 /* -- Layout constructs -- */
 #logo       { position: relative; padding: 0 50px; height: 149px; overflow: hidden; background: url('../images/bg-logo.png') 0 0 no-repeat; }
@@ -109,6 +110,16 @@ img.right { margin-right: 0 !important; }
 #mainMenu li.active a       { padding-top: 9px; text-decoration: none !important; color: #000 !important; background: #fff url('../images/bg-main-menu_active.gif') repeat-x; border-bottom: 6px #fff solid; }
 #mainMenu li.active a span  { top: 12px; background-position: 0 -8px; }
 #mainMenu li a:hover        { color: #fff; }
+
+/* -- Footer Menu -- */
+#footerMenu ul                { position: relative; height: 46px; }
+#footerMenu li                { position: relative; float: left; padding-right: 7px; }
+#footerMenu li a              { display: block; float: left; color: #b59d97; height: 30px; padding: 16px 15px 0 20px; }
+#footerMenu li a span         { position: absolute; left: 8px; top: 20px; width: 6px; height: 8px !important; overflow: hidden; background: url('../images/ico/ico-menu_item.gif') no-repeat; }
+#footerMenu li.active         { position: relative; top: 7px; background: url('../images/bg-main-menu_shadow.gif') 100% 0 no-repeat; }
+#footerMenu li.active a       { padding-top: 9px; text-decoration: none !important; color: #000 !important; background: #fff url('../images/bg-main-menu_active.gif') repeat-x; border-bottom: 6px #fff solid; }
+#footerMenu li.active a span  { top: 12px; background-position: 0 -8px; }
+#footerMenu li a:hover        { color: #fff; }
 
 /* -- Search block -- */
 #search { position: absolute; right: 12px; bottom: 16px; width: 270px; text-align: right; }
@@ -155,6 +166,6 @@ img.right { margin-right: 0 !important; }
 #menuBlock .boxText ol li       { margin: 3px 0 3px 10px; padding: 0; background: none; list-style: decimal; }
 
 /* -- Footer part -- */
-#foot p       { padding: 27px 15px 0; }
+#foot p       { padding: 15px 15px 0; }
 #foot *       { color: #8a817e; }
 #foot a:hover { color: #fff; }

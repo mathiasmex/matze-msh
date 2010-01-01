@@ -55,4 +55,40 @@ describe PagesController do
 		end
 	end
 
+	describe "GET 'reference'" do
+		it "should be successful" do
+			get 'reference'
+			response.should be_success
+		end
+
+		it "should have the right title" do
+			get 'reference'
+			response.should have_tag("title", @base_title + " | Referenzen")
+		end
+	end
+
+	describe "GET 'news'" do
+		it "should be successful" do
+			get 'news'
+			response.should be_success
+		end
+
+		it "should have the right title" do
+			get 'news'
+			response.should have_tag("title", @base_title + " | Aktuelles")
+		end
+	end
+
+	describe "GET 'impressum'" do
+		it "should be successful" do
+			get 'impressum'
+			response.should be_success
+		end
+
+		it "should have the right title" do
+			get 'impressum'
+			response.should have_tag("title", @base_title + " | Impressum")
+		end
+	end
+
 end
