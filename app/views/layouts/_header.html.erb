@@ -1,0 +1,25 @@
+<div id="head">
+	<div id="logo">
+		<% logo = image_tag("logo.jpg", :alt => "matze.msh", :class => "round") %>
+		<%= link_to logo, root_url %>
+		<h1><a href="/">matze.msh</a></h1>
+		<h2><a href="/">WebDesign</a></h2>
+	</div>
+	<hr class="hidden" />
+	<div id="mainMenu">
+		<ul>
+			<li class="active"><%= link_to "Start <span></span>", root_url %></li>
+			<li><%= link_to "Webdienste <span></span>", service_url %></li>
+			<li><%= link_to "Referenzen <span></span>", reference_url %></li>
+			<li><%= link_to "Aktuelles <span></span>", news_url %></li>
+		</ul>
+
+		<form action="" method="post" id="search">
+			<fieldset>
+				<input type="text" name="" value="" class="button" />
+				<input type="submit" value="" class="submit" />
+			</fieldset>
+		</form>
+	</div>
+	<hr class="hidden" />
+</div>
