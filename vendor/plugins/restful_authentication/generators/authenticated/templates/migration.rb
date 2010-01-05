@@ -1,6 +1,6 @@
-class CreateUsers < ActiveRecord::Migration
+class <%= migration_name %> < ActiveRecord::Migration
   def self.up
-    create_table "users", :force => true do |t|
+    create_table "<%= table_name %>", :force => true do |t|
       t.column :login,                     :string
       t.column :email,                     :string
       t.column :crypted_password,          :string, :limit => 40
@@ -9,13 +9,14 @@ class CreateUsers < ActiveRecord::Migration
       t.column :updated_at,                :datetime
       t.column :remember_token,            :string
       t.column :remember_token_expires_at, :datetime
-      t.column :activation_code, :string, :limit => 40
-      t.column :activated_at, :datetime
-      
+      <% if options[:include_activation] %>t.column :activation_code, :string, :limit => 40
+      t.column :activated_at, :datetime<% end %>
+      <% if options[:stateful] %>t.column :state, :string, :null => :no, :default => 'passive'
+      t.column :deleted_at, :datetime<% end %>
     end
   end
 
   def self.down
-    drop_table "users"
+    drop_table "<%= table_name %>"
   end
 end

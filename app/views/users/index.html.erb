@@ -1,0 +1,25 @@
+<h2>Alle registrierten Benutzer</h2>
+<table>
+  <tr>
+    <th>Login</th>
+    <th>E-Mail</th>
+    <th>Status &auml;ndern</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= link_to user.login, user_path(user)%></td>
+    <td><%=h user.email %></td>
+    <td><%=h user.state ? '' : '' %>
+    <% unless user == current_user %>
+      <% if user.state == "active" %>
+        <%= link_to('Deaktivieren', user_path(user.id), 
+                                  :method => :delete) %>
+      <% else %>
+        <%= link_to('Aktivieren', enable_user_path(user.id), 
+                                :method => :put)%>
+      <% end %>
+    <% end%>
+    </td>
+  </tr>
+<% end %>
+</table>

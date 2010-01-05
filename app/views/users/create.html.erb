@@ -1,0 +1,16 @@
+<br />
+<fieldset>
+  <legend>Bitte beachten Sie:</legend>
+  <br />
+  <p>
+    Eine E-Mail wurde an <%= @user.email %> geschickt mit Erl&auterungen, wie Sie Ihren Zugang aktivieren.
+    <li>
+      Wenn Ihre angegebene E-Mail nicht g&uuml;ltig ist, m&uuml;ssen Sie sich erneut
+      <%= link_to "Registrieren", signup_path %> und eine g&uuml;ltige E-Mail Adresse angeben.
+    </li>
+    <li>
+      Wenn Sie keine E-Mail bekommen, pr&uuml;fen Sie Ihren Spam-Ordner, weil Ihr Spam-Filter eventuell
+      die Registrierungs-Email abgefangen hat. 
+    </li>
+  </p>
+</fieldset>

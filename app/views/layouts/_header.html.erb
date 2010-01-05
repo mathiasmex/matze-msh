@@ -7,13 +7,7 @@
 	</div>
 	<hr class="hidden" />
 	<div id="mainMenu">
-		<ul>
-			<li class="active"><%= link_to "Start <span></span>", root_url %></li>
-			<li><%= link_to "Webdienste <span></span>", service_url %></li>
-			<li><%= link_to "Referenzen <span></span>", reference_url %></li>
-			<li><%= link_to "Aktuelles <span></span>", news_url %></li>
-		</ul>
-
+		<%= main_menu %>
 		<form action="" method="post" id="search">
 			<fieldset>
 				<input type="text" name="" value="" class="button" />

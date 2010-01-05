@@ -1,0 +1,10 @@
+<h2>Benutzer-Details</h2>
+<p>Login: <%=h @user.login %><br/>
+E-Mail: <%=h @user.email %><br/>
+Aktiv?: <%=h @user.state ? 'Yes' : 'No' %><br/>
+Rolle:
+  <% @user.roles.each do |role| %>
+    <%=h role.name %><br/>
+  <% end %>
+</p>
+<p><%= link_to 'Zur&uuml;ck', users_path %></p>

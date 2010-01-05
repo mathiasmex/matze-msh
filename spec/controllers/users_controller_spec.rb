@@ -15,6 +15,11 @@ describe UsersController do
   end
 
   
+  it 'signs up user in pending state' do
+    create_user
+    assigns(:user).reload
+    assigns(:user).should be_pending
+  end
 
   
   it 'signs up user with activation code' do

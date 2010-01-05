@@ -1,12 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
+  map.resources :users, :member => { :enable => :put } do |users|
+    users.resource :roles
+  end
 
   map.resource :session
 
   map.activate '/activate/:activation_code', 
     :controller => 'users', 
-    :action => 'activate', 
-    :activation_code => nil
+    :action => 'activate'
 
   map.signup '/signup', 
     :controller => 'users', 
@@ -19,6 +20,22 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', 
     :controller => 'sessions', 
     :action => 'destroy'
+
+  map.forgot_password '/forgot_password',
+    :controller => 'users',
+    :action => 'forgot_password'
+
+  map.reset_password '/reset_password/:id', 
+    :controller => 'users', 
+    :action => 'reset_password'
+
+  map.change_password '/change_password', 
+    :controller => 'users', 
+    :action => 'change_password'
+
+  map.show '/show', 
+    :controller => 'users', 
+    :action => 'show'
 
   map.contact '/contact',   :controller => 'pages', :action => 'contact'
   map.about   '/about',     :controller => 'pages', :action => 'about'

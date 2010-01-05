@@ -15,12 +15,17 @@
 		<div id="content">
     <div id="contentBlock">
       <div class="item last">
-    <h3><%= flash[:notice] %></h3>
+      <h3><%= flash[:notice] %></h3>
     	<%= yield %>
       </div>
     </div>
     <hr class="hidden" />
     <div id="menuBlock">
+      <div class="box firstBox subMenu">
+	   <%= render 'layouts/login_info' %>
+      </div>
+      <div class="box subMenu">
+      </div>
       <div class="box firstBox subMenu">
         <h3>Kategorien</h3>
         <ul>
@@ -31,6 +36,8 @@
         </ul>
       </div>
       <div class="box subMenu">
+      </div>
+      <div class="box firstBox subMenu">
         <h3>Nachrichten</h3>
         <ul>
           <li><a href="#">Dezember 2009</a></li>
@@ -40,7 +47,7 @@
           <li><a href="#">August 2009</a></li>
         </ul>
       </div>
-    </div>
+   </div>
   </div>
   <hr class="hidden" />
   <hr class="hidden" />
