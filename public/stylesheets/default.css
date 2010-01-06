@@ -146,7 +146,7 @@ img.right { margin-right: 0 !important; }
 #contentBlock ol,
 #contentBlock table             { margin-bottom: 2em; }
 #contentBlock table td,
-#contentBlock table th          { border: 1px #d8d8d8 solid; padding: 10px; }
+#contentBlock table th          { border: 1px #d8d8d8 solid; padding: 5px; }
 #contentBlock table tr.add td,
 #contentBlock table tr.add th   { background: url('../images/bg-table_line.gif') repeat-x; }
 

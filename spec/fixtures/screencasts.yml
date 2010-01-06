@@ -1,0 +1,14 @@
+intro:
+  product: intro
+  format: hd
+  duration: 3600 # sekunden
+  size: 140 # MB
+  preview_url: http://localhost:3000/preview/intro
+  revision: 1
+advanced:
+  product: advanced
+  format: hd
+  duration: 1800 # sekunden
+  size: 70 # MB
+  preview_url: http://localhost:3000/preview/advanced
+  revision: 2

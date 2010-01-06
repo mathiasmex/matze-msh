@@ -1,0 +1,7 @@
+<h1>New screencast</h1>
+
+<%= error_messages_for(:object => [@screencast.product, @screencast]) %>
+
+<%= render :partial => 'screencast_product_form', :locals => {:label => "Create"} %>
+
+<%= link_to 'Back', screencasts_path %>

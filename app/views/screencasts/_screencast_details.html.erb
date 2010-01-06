@@ -1,0 +1,85 @@
+<% is_show = action_name == 'show' %>
+<h2>Screencast Details</h2>
+<table id="product">
+  <tr>
+    <% if is_show %>
+      <td valign="top">
+        <%= image_tag ("/screencasts/image/#{@screencast.product.photo.id}", :size => '100x100') %>
+      </td>
+    <% else %>
+      <td valign="top">
+        <%= image_tag ("/screencasts/image/#{@screencast.product.photo.id}", :size => '50x50') %>
+      </td>
+    <% end %>
+    <td>
+      <table>
+        <tr>
+          <td valign="top"><h2><%=h @screencast.product.name %></h2></td>
+        </tr>
+        <tr>
+          <% if is_show %>
+            <td colspan="2"><%=h @screencast.product.description %></td>
+          <% else %>
+            <td colspan="2">
+              <%=h truncate(@screencast.product.description, 100, "...") %>
+              <%= link_to "[mehr]", @screencast %>
+            </td>
+          <% end %>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <% if is_show %>
+          <tr>
+            <td>Created at:</td>
+            <td><%=h @screencast.product.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+          </tr>
+          <tr>
+            <td>Created at:</td>
+            <td><%=h @screencast.product.updated_at.strftime("%Y-%m-%d %H:%M") %></td>
+          </tr>
+          <tr>
+            <td colspan="2">&nbsp;</td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Category:</td>
+          <td><%=h @screencast.product.category.name %></td>
+        </tr>
+        <tr>
+         <td>Manufacturer:</td>
+         <td><%=h @screencast.product.manufacturer.name %></td>
+        </tr>
+        <% if is_show %>
+          <tr>
+            <td>Format:</td>
+            <td><%=h @screencast.format.name %></td>
+          </tr>
+          <tr>
+           <td>Duration:</td>
+           <td><%=h @screencast.duration %></td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td><%=h @screencast.size %></td>
+          </tr>
+          <tr>
+            <td>Preview URL:</td>
+            <td><%=h @screencast.preview_url %></td>
+          </tr>
+          <tr>
+            <td>Revision:</td>
+            <td><%=h @screencast.revision %></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr/></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Preis:</td>
+          <td><%=h format_price_in_euro @screencast.product.price %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

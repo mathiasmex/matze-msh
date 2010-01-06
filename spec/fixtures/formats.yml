@@ -1,0 +1,8 @@
+hd:
+  name: HD1080i
+  description: Hochaufl&ouml;send
+
+sd:
+  name: SD
+  description: Nicht so toll
+

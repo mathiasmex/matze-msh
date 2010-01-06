@@ -1,0 +1,9 @@
+one:
+  content_type: image/jpeg
+  filename: picture1.jpg
+  binary_data: 
+
+two:
+  content_type: image/jpeg
+  filename: picture2.jpg
+  binary_data: 

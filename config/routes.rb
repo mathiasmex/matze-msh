@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resource :session
+  map.resources :screencasts
 
   map.activate '/activate/:activation_code', 
     :controller => 'users', 

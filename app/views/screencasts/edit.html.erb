@@ -1,0 +1,8 @@
+<h1>Editing screencast</h1>
+<% flash[:notice] %>
+
+<%= error_messages_for(:object => [@screencast.product, @screencast]) %>
+
+<%= render :partial => 'screencast_product_form', :locals => {:label => "Update"} %>
+
+<%= link_to 'Back', screencasts_path %>

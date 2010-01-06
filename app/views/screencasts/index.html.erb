@@ -1,0 +1,26 @@
+<h1>Listing screencasts</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for @screencast in @screencasts %>
+  <tr>
+    <%= render :partial => 'screencast_details' %>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Show', @screencast %></td>
+    <% if is_admin? %>
+      <td><%= link_to 'Edit', edit_screencast_path(@screencast) %></td>
+      <td><%= link_to 'Destroy', @screencast, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% if is_admin? %>
+  <%= link_to 'New screencast', new_screencast_path %>
+<% end %>

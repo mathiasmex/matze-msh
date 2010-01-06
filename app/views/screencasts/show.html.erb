@@ -1,0 +1,5 @@
+<%= render :partial => 'screencast_details' %>
+<% if is_admin? %>
+  <%= link_to 'Edit', edit_screencast_path(@screencast) %> |
+<% end %>
+<%= link_to 'Back', screencasts_path %>

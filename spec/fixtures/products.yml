@@ -1,0 +1,14 @@
+intro:
+  name: Einf&uuml;hrung in BDD
+  description: Eine kurze Einf&uum;hrung in BDD f&uuml;r Einsteiger.
+  price: 900 # cents
+  photo: one
+  category: basics
+  manufacturer: rails_experts
+advanced:
+  name: Single Table Inheritance
+  description: Erweiterte ORM-Konzepte f&uuml;r Ruby on Rails
+  price: 900 # cents
+  photo: two
+  category: advanced
+  manufacturer: rails_experts

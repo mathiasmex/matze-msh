@@ -1,0 +1,22 @@
+<% form_for(@screencast, :html => {:multipart => true}) do |f| %>
+  <% fields_for "photo", @screencast.product.photo do |form| %>
+   <p>Picture:<br/><%= form.file_field(:picture_file) %></p>
+  <% end %>
+  <% fields_for "product", @screencast.product do |form| %>
+    <p>Name:<br/><%= form.text_field :name %></p>
+    <p>Description:<br/><%= form.text_area :description %></p>
+    <p>Price:<br/><%= form.text_field :price %></p>
+    <p>Category:<br/><%= form.collection_select :category_id, 
+                            categories, :id, :name %></p>
+    <p>Manufacturer:<br/><%= form.collection_select :manufacturer_id, 
+                            manufacturers, :id, :name %></p>
+  <% end %>
+  <p>Format:<br/><%= f.collection_select :format_id, 
+                            formats, :id, :name %></p>
+  <p>Duration:<br/><%= f.text_field :duration %></p>
+  <p>Size (in MB):<br/><%= f.text_field :size %></p>
+  <p>URL for preview:<br/><%= f.text_field :preview_url %></p>
+  <p>Revision:<br/><%= f.text_field :revision %></p>
+  <p><%= f.submit label %></p>
+<% end %>
+
