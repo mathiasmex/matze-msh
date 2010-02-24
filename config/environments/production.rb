@@ -1,4 +1,5 @@
 # Settings specified here will take precedence over those in config/environment.rb
+config.action_mailer.default_url_options = { :host => "hollow-night-45.heroku.com" }
 
 # The production environment is meant for finished, "live" apps.
 # Code is not reloaded between requests
