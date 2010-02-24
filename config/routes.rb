@@ -72,7 +72,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route within a namespace:
   #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
+  #     # Directs /admin/products / * to Admin::ProductsController (app/controllers/admin/products_controller.rb)
   #     admin.resources :products
   #   end
 

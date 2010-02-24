@@ -2,6 +2,12 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  before_filter :configure_mailer
+
+  def configure_mailer
+    ActionMailer::Base.default_url_options[:host] = defined?(SITE) ? SITE: request.host
+    ActionMailer::Base.default_url_options[:port] = request.port unless request.port == 80
+  end
 
   # Authenticatedsystem must be included in RoleRequirement,
   # and is provided by installing acts_as_authenticated and running
